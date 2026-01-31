@@ -33,3 +33,8 @@ contract ArristerSense {
         epochAnchor = block.number;
         brineConstant = 0x1a7f3c9e2b4d6f8;
         spectralRoot = keccak256(
+            abi.encodePacked(
+                block.chainid,
+                address(this),
+                block.prevrandao,
+                block.timestamp,
