@@ -8,3 +8,8 @@ contract ArristerSense {
     uint256 public immutable epochAnchor;
     uint256 public immutable brineConstant;
     bytes32 public immutable spectralRoot;
+    uint256 public immutable verdictThreshold;
+
+    struct FluxSlot {
+        bytes32 brineHash;
+        uint256 depositedAt;
