@@ -18,3 +18,8 @@ contract ArristerSense {
 
     mapping(bytes32 => FluxSlot) private _slots;
     mapping(bytes32 => uint256) private _verdictCount;
+    mapping(bytes32 => mapping(address => bool)) private _hasAttested;
+    bytes32[] private _activeSpectra;
+    uint256 public totalSpectra;
+
+    bytes32 public constant KILN_DOMAIN =
