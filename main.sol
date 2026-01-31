@@ -23,3 +23,8 @@ contract ArristerSense {
     uint256 public totalSpectra;
 
     bytes32 public constant KILN_DOMAIN =
+        0x8f3e92c7a4b1d6e5f0a9c2b8d7e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e;
+
+    event SpectrumBound(bytes32 indexed fluxId, bytes32 brineHash, uint256 epoch);
+    event VerdictResolved(bytes32 indexed fluxId, bytes32 consensusHash, uint256 weight);
+
