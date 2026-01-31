@@ -13,3 +13,8 @@ contract ArristerSense {
     struct FluxSlot {
         bytes32 brineHash;
         uint256 depositedAt;
+        bool resolved;
+    }
+
+    mapping(bytes32 => FluxSlot) private _slots;
+    mapping(bytes32 => uint256) private _verdictCount;
