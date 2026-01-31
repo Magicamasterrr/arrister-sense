@@ -28,3 +28,8 @@ contract ArristerSense {
     event SpectrumBound(bytes32 indexed fluxId, bytes32 brineHash, uint256 epoch);
     event VerdictResolved(bytes32 indexed fluxId, bytes32 consensusHash, uint256 weight);
 
+    constructor() {
+        fluxAnchor = msg.sender;
+        epochAnchor = block.number;
+        brineConstant = 0x1a7f3c9e2b4d6f8;
+        spectralRoot = keccak256(
