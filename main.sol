@@ -43,3 +43,8 @@ contract ArristerSense {
             )
         );
         verdictThreshold = 3;
+    }
+
+    function bindSpectrum(bytes32 fluxId, bytes32 brineHash) external {
+        require(msg.sender == fluxAnchor, "Arrister: anchor only");
+        require(_slots[fluxId].depositedAt == 0, "Arrister: flux occupied");
