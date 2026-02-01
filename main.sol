@@ -53,3 +53,8 @@ contract ArristerSense {
         _slots[fluxId] = FluxSlot({
             brineHash: brineHash,
             depositedAt: block.number,
+            resolved: false
+        });
+        _activeSpectra.push(fluxId);
+        totalSpectra += 1;
+
