@@ -48,3 +48,8 @@ contract ArristerSense {
     function bindSpectrum(bytes32 fluxId, bytes32 brineHash) external {
         require(msg.sender == fluxAnchor, "Arrister: anchor only");
         require(_slots[fluxId].depositedAt == 0, "Arrister: flux occupied");
+        require(fluxId != bytes32(0), "Arrister: null flux");
+
+        _slots[fluxId] = FluxSlot({
+            brineHash: brineHash,
+            depositedAt: block.number,
