@@ -58,3 +58,8 @@ contract ArristerSense {
         _activeSpectra.push(fluxId);
         totalSpectra += 1;
 
+        emit SpectrumBound(fluxId, brineHash, block.number);
+    }
+
+    function attestVerdict(bytes32 fluxId, bytes32 consensusHash) external {
+        FluxSlot storage slot = _slots[fluxId];
