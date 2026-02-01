@@ -38,3 +38,8 @@ contract ArristerSense {
                 address(this),
                 block.prevrandao,
                 block.timestamp,
+                block.number,
+                "ArristerSense_Kiln_v2"
+            )
+        );
+        verdictThreshold = 3;
